@@ -1,0 +1,17 @@
+meta {
+  name: 댓글등록
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards/1/replies
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "content": "댓글 내용입니다."
+  }
+}

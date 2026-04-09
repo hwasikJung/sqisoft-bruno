@@ -1,0 +1,20 @@
+meta {
+  name: 코드상세수정
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/details/DTL_001/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cdDtlNm": "수정된 코드상세명",
+    "cdDtlDesc": "수정된 설명",
+    "useYn": "Y",
+    "sortSq": 1
+  }
+}

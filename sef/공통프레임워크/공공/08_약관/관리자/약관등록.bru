@@ -1,0 +1,23 @@
+meta {
+  name: 약관등록
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/terms
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "trmsId": "TERMS_NEW",
+    "trmsNm": "신규 약관",
+    "trmsCn": "약관 내용입니다.",
+    "purposeCd": "JOIN",
+    "requiredYn": "Y",
+    "useYn": "Y",
+    "sortSq": 1
+  }
+}

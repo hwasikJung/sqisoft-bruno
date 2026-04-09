@@ -1,0 +1,16 @@
+meta {
+  name: 내게시글목록
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards/my
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageNum: 1
+  pageSize: 10
+}

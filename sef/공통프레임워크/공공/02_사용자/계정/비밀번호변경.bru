@@ -1,0 +1,18 @@
+meta {
+  name: 비밀번호변경
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/account/reset-password
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "currentPassword": "현재비밀번호",
+    "newPassword": "NewPassword1234!"
+  }
+}

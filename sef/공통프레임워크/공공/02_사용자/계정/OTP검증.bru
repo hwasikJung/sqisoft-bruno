@@ -1,0 +1,19 @@
+meta {
+  name: OTP검증
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/account/otp/verify
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "user@sqisoft.com",
+    "purpose": "TEMP_PASSWORD",
+    "otp": "123456"
+  }
+}

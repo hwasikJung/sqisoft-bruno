@@ -1,0 +1,17 @@
+meta {
+  name: 상태변경
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/users/user@sqisoft.com/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userSttsCd": "A"
+  }
+}

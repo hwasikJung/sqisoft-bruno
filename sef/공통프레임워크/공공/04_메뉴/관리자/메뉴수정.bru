@@ -1,0 +1,20 @@
+meta {
+  name: 메뉴수정
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus/MENU_BOARD_001/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "menuNm": "수정된 메뉴명",
+    "menuDesc": "수정된 설명",
+    "useYn": "Y",
+    "menuAcsUrl": "/updated-menu"
+  }
+}

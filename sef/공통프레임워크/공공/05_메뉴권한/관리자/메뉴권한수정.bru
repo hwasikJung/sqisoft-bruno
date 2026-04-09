@@ -1,0 +1,29 @@
+meta {
+  name: 메뉴권한수정
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menu-roles
+  body: json
+  auth: inherit
+}
+
+params:query {
+  roleId: USER_ROLE_USR
+}
+
+body:json {
+  {
+    "menuAuths": [
+      {
+        "menuId": "MENU_BOARD_001",
+        "readYn": "Y",
+        "createYn": "Y",
+        "updateYn": "Y",
+        "deleteYn": "N"
+      }
+    ]
+  }
+}

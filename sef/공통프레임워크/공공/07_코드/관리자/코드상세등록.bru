@@ -1,0 +1,21 @@
+meta {
+  name: 코드상세등록
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/details
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cdDtlId": "DTL_001",
+    "cdDtlNm": "코드상세명",
+    "cdDtlDesc": "코드상세 설명",
+    "useYn": "Y",
+    "sortSq": 1
+  }
+}

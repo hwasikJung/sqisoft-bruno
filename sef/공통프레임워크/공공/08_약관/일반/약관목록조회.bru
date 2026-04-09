@@ -1,0 +1,15 @@
+meta {
+  name: 약관목록조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/terms
+  body: none
+  auth: none
+}
+
+params:query {
+  purposeCd: JOIN
+}

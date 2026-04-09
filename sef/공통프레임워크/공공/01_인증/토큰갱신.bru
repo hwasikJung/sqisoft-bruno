@@ -1,0 +1,17 @@
+meta {
+  name: 토큰갱신
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/auth/refresh
+  body: none
+  auth: none
+}
+
+script:post-response {
+  if (res.body && res.body.data) {
+    bru.setEnvVar("accessToken", res.body.data.token);
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: 메뉴순서변경
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus/reorder
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "items": [
+      {"menuId": "MENU_001", "menuSq": 1},
+      {"menuId": "MENU_002", "menuSq": 2}
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+meta {
+  name: 로그인이력목록조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/login-history
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageNum: 1
+  pageSize: 10
+}

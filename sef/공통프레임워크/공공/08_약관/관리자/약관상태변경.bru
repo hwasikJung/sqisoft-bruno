@@ -1,0 +1,17 @@
+meta {
+  name: 약관상태변경
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/terms/TERMS_NEW/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "useYn": "N"
+  }
+}

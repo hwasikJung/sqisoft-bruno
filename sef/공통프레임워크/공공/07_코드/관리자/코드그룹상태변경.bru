@@ -1,0 +1,17 @@
+meta {
+  name: 코드그룹상태변경
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "useYn": "N"
+  }
+}

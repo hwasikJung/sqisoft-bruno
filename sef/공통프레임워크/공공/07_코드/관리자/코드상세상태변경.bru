@@ -1,0 +1,17 @@
+meta {
+  name: 코드상세상태변경
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/details/DTL_001/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "useYn": "N"
+  }
+}

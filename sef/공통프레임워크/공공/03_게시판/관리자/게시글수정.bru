@@ -1,0 +1,18 @@
+meta {
+  name: 게시글수정
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus/MENU_BOARD_001/boards/1/update
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  boardData: @json {
+    "bbsTtl": "수정된 제목",
+    "bbsCn": "수정된 내용"
+  }
+}

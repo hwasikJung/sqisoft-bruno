@@ -1,0 +1,22 @@
+meta {
+  name: 역할수정
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/roles/USER_ROLE_USR/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "roleId": "USER_ROLE_USR",
+    "roleNm": "수정된 역할명",
+    "roleDesc": "수정된 설명",
+    "useYn": "Y",
+    "indctYn": "N",
+    "changeRsn": "역할 정보 수정"
+  }
+}

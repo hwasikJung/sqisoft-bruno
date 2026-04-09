@@ -1,0 +1,18 @@
+meta {
+  name: 휴면계정활성화
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/account/activate
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "user@sqisoft.com",
+    "verifyToken": "검증토큰입력"
+  }
+}

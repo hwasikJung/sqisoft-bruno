@@ -1,0 +1,17 @@
+meta {
+  name: 역할상태변경
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/roles/USER_ROLE_USR/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "useYn": "Y"
+  }
+}

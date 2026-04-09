@@ -1,0 +1,17 @@
+meta {
+  name: 메뉴상태변경
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus/MENU_BOARD_001/status/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "useYn": "N"
+  }
+}

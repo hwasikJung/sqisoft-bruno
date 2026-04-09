@@ -1,0 +1,30 @@
+meta {
+  name: 회원가입
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/users/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "newuser@example.com",
+    "userPswd": "Password1234!",
+    "userNm": "테스트사용자",
+    "roleId": "USER_ROLE_USR",
+    "termsConsents": [
+      {
+        "trmsId": "TERMS_SERVICE",
+        "agreeYn": "Y"
+      },
+      {
+        "trmsId": "TERMS_PRIVACY",
+        "agreeYn": "Y"
+      }
+    ]
+  }
+}

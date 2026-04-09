@@ -1,0 +1,17 @@
+meta {
+  name: 내정보수정
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/users/me/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userNm": "수정된이름"
+  }
+}

@@ -1,0 +1,11 @@
+meta {
+  name: 비밀번호초기화
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/users/user@sqisoft.com/password/reset
+  body: none
+  auth: inherit
+}

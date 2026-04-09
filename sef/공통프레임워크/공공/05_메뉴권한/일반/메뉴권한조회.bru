@@ -1,0 +1,15 @@
+meta {
+  name: 메뉴권한조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/menu-roles
+  body: none
+  auth: inherit
+}
+
+params:query {
+  roleId: USER_ROLE_USR
+}

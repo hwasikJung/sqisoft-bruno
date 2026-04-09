@@ -1,0 +1,19 @@
+meta {
+  name: 코드그룹수정
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cdGrpNm": "수정된 코드그룹명",
+    "cdGrpDesc": "수정된 설명",
+    "useYn": "Y"
+  }
+}

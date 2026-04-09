@@ -1,0 +1,17 @@
+meta {
+  name: 게시글삭제
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus/MENU_BOARD_001/boards/1/delete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "reason": "관리자에 의한 삭제"
+  }
+}

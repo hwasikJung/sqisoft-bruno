@@ -1,0 +1,18 @@
+meta {
+  name: 방문기록등록
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/visits
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "pageUrl": "/main",
+    "pageNm": "메인페이지"
+  }
+}

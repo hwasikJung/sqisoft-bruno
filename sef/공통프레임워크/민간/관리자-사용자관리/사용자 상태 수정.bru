@@ -1,0 +1,17 @@
+meta {
+  name: 사용자 상태 수정
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrlPrivate}}/adm/v1/users/admin@test.com/status
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userSttsCd": "A"
+  }
+}

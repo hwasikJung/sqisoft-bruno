@@ -1,0 +1,17 @@
+meta {
+  name: 역할변경
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/users/user@sqisoft.com/role/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "roleId": "USER_ROLE_MNG"
+  }
+}

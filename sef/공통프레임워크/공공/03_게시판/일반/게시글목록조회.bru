@@ -1,0 +1,18 @@
+meta {
+  name: 게시글목록조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageNum: 1
+  pageSize: 10
+  ~searchType:
+  ~searchKeyword:
+}

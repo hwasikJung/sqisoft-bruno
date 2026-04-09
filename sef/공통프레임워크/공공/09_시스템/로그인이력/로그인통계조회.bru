@@ -1,0 +1,11 @@
+meta {
+  name: 로그인통계조회
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/login-history/statistics
+  body: none
+  auth: inherit
+}

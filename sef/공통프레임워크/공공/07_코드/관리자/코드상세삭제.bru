@@ -1,0 +1,17 @@
+meta {
+  name: 코드상세삭제
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups/NEW_GRP/details/DTL_001/delete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "reason": "코드상세 삭제 사유"
+  }
+}

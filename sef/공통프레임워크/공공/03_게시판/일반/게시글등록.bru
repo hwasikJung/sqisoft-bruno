@@ -1,0 +1,19 @@
+meta {
+  name: 게시글등록
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  boardData: @json {
+    "bbsTtl": "제목",
+    "bbsCn": "내용",
+    "useYn": "Y"
+  }
+}

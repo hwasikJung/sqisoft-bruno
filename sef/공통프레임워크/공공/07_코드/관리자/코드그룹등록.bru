@@ -1,0 +1,20 @@
+meta {
+  name: 코드그룹등록
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/codes/groups
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cdGrpId": "NEW_GRP",
+    "cdGrpNm": "신규 코드그룹",
+    "cdGrpDesc": "코드그룹 설명",
+    "useYn": "Y"
+  }
+}

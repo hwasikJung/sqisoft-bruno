@@ -1,0 +1,16 @@
+meta {
+  name: 감사로그목록조회
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/logs/audit
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pageNum: 1
+  pageSize: 10
+}

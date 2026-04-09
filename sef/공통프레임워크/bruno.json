@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "공통프레임워크",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

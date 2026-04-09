@@ -1,0 +1,26 @@
+meta {
+  name: 메뉴등록
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/menus
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "menuId": "MENU_NEW_001",
+    "upMenuId": "",
+    "menuNm": "새메뉴",
+    "menuDesc": "새 메뉴 설명",
+    "useYn": "Y",
+    "menuDepth": 1,
+    "menuSq": 99,
+    "menuAcsUrl": "/new-menu",
+    "pblYn": "N",
+    "admYn": "N"
+  }
+}

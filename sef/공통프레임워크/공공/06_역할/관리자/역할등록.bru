@@ -1,0 +1,22 @@
+meta {
+  name: 역할등록
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/roles
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "roleId": "USER_ROLE_NEW",
+    "roleNm": "신규역할",
+    "roleDesc": "신규 역할 설명",
+    "useYn": "Y",
+    "indctYn": "N",
+    "changeRsn": "신규 역할 생성"
+  }
+}
