@@ -1,7 +1,0 @@
-info:
-  name: 사용자
-  type: folder
-  seq: 2
-
-request:
-  auth: inherit
