@@ -1,0 +1,26 @@
+info:
+  name: 사용자 정보 수정
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://localhost:8080/adm/v1/users/admin@test.com
+  body:
+    type: json
+    data: |
+      {
+        "userNm": "홍길동"
+      }
+  auth: inherit
+
+headers:
+  - name: Content-Type
+    value: application/json
+    enabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

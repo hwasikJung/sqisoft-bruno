@@ -1,0 +1,29 @@
+info:
+  name: 회원가입
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/v1/users
+  body:
+    type: json
+    data: |
+      {
+        "userId": "test@test.com",
+        "password": "Test1234!@",
+        "userNm": "테스트사용자",
+        "roleId": "ROLE_USER"
+      }
+  auth: inherit
+
+headers:
+  - name: Content-Type
+    value: application/json
+    enabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
