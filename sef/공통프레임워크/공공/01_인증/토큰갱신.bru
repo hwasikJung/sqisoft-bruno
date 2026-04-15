@@ -15,3 +15,11 @@ script:post-response {
     bru.setEnvVar("accessToken", res.body.data.token);
   }
 }
+
+docs {
+  httpOnly 쿠키(`refresh-token`)에 저장된 리프레시 토큰으로 새 액세스 토큰을 발급합니다.
+
+  - 사전 조건: 먼저 `01_인증/로그인`을 실행해야 Bruno가 Set-Cookie로 refresh-token을 자동 저장합니다.
+  - Request body/Authorization 헤더는 사용하지 않습니다. 서버는 쿠키에서만 리프레시 토큰을 읽습니다.
+  - Bruno는 같은 호스트(baseUrl)의 쿠키를 자동 전송하므로 별도 설정이 필요 없습니다.
+}

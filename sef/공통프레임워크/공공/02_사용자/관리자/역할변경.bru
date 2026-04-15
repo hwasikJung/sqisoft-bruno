@@ -5,13 +5,14 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/adm/v1/users/user@sqisoft.com/role/update
+  url: {{baseUrl}}/adm/v1/users/0194abcd-1234-7def-8000-000000000001/role/update
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "roleId": "USER_ROLE_MNG"
+    "roleId": "USER_ROLE_MNG",
+    "changeRsn": "역할 승격"
   }
 }

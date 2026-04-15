@@ -1,0 +1,25 @@
+meta {
+  name: 보관수동실행_DryRun
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/log-retention/execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dryRun": true
+  }
+}
+
+docs {
+  로그 보관 배치 수동 실행 - Dry-run 모드.
+  5개 로그 테이블(tb_api_log, tb_audit_log, tb_lgn_hist, tb_visit_log, tb_error_log)의
+  보관 기간 초과 건수만 집계하고 실제 DELETE는 수행하지 않는다.
+  응답: dryRun, totalDeleted, results[{ targetTb, cutoffDt, deletedCount, execStatus }]
+  권한: ROLE_ADMIN
+}

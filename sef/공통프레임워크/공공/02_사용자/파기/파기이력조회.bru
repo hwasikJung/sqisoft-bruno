@@ -1,0 +1,16 @@
+meta {
+  name: 파기이력조회
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/user-purge/logs
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 20
+}

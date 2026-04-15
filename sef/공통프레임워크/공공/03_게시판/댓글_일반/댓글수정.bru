@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards/1/replies/1/update
+  url: {{baseUrl}}/api/v1/menus/MENU_BOARD_001/boards/1/comments/1/update
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "content": "수정된 댓글 내용입니다."
+    "cmntCn": "수정된 댓글 내용입니다."
   }
 }

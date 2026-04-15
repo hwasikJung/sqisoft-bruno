@@ -1,0 +1,17 @@
+meta {
+  name: 파기수동실행
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/user-purge/execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dryRun": true
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: 보관이력조회
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/log-retention/logs?page=1&pageSize=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 20
+}
+
+docs {
+  로그 보관 배치 실행 이력을 페이징 조회한다 (retention_sq 내림차순).
+  스케줄러 실행과 관리자 수동 실행이 구분 없이 함께 조회된다.
+  응답: [{ retentionSq, targetTb, cutoffDt, deletedCount, dryRun, execStatus, errorMessage, execStartDt, execEndDt }]
+  권한: ROLE_ADMIN
+}

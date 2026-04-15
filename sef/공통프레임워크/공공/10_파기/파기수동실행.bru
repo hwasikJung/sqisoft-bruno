@@ -1,0 +1,23 @@
+meta {
+  name: 파기수동실행
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/user-purge/execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dryRun": false
+  }
+}
+
+docs {
+  파기 배치 수동 실행 - 실제 파기.
+  ⚠ 즉시 PII 익명화가 수행되며 복구 불가능하다. 반드시 Dry-run으로 선검증 후 호출할 것.
+  권한: ROLE_ADMIN
+}

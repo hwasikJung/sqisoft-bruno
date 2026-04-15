@@ -1,0 +1,23 @@
+meta {
+  name: 파기수동실행_DryRun
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/adm/v1/user-purge/execute
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "dryRun": true
+  }
+}
+
+docs {
+  파기 배치 수동 실행 - Dry-run 모드.
+  대상자 수만 카운트하고 실제 DB 변경은 하지 않는다. 운영 적용 전 검증용.
+  권한: ROLE_ADMIN
+}

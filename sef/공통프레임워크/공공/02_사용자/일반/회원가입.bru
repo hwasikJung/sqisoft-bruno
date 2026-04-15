@@ -12,19 +12,14 @@ post {
 
 body:json {
   {
-    "userId": "newuser@example.com",
-    "userPswd": "Password1234!",
-    "userNm": "테스트사용자",
-    "roleId": "USER_ROLE_USR",
-    "termsConsents": [
-      {
-        "trmsId": "TERMS_SERVICE",
-        "agreeYn": "Y"
-      },
-      {
-        "trmsId": "TERMS_PRIVACY",
-        "agreeYn": "Y"
-      }
+    "lgnId": "admin",
+    "userPswd": "Sqisoft1234!",
+    "userNm": "관리자",
+    "userEml": "admin1@test.com",
+    "userTelno": "31416780642",
+    "roleId": "USER_ROLE_ADM",
+     "termsConsents": [
+      { "trmsId": "PRIVACY_POLICY", "cnstYn": "Y" }
     ]
   }
 }

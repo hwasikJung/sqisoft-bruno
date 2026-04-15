@@ -1,0 +1,18 @@
+meta {
+  name: 내약관동의변경
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/terms/my-agree/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "trmsId": "TERMS_MARKETING",
+    "cnstYn": "Y"
+  }
+}

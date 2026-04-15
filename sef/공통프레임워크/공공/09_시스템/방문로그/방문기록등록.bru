@@ -12,7 +12,11 @@ post {
 
 body:json {
   {
-    "pageUrl": "/main",
-    "pageNm": "메인페이지"
+    "sessionId": "sess-{{$randomUUID}}",
+    "userId": null,
+    "pagePath": "/main",
+    "durationSec": 0,
+    "regionNm": null,
+    "newVisitor": true
   }
 }

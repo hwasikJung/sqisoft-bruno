@@ -1,0 +1,15 @@
+meta {
+  name: 로그인아이디중복확인
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/users/check-lgn-id
+  body: none
+  auth: none
+}
+
+params:query {
+  lgnId: newuser01
+}

@@ -12,14 +12,18 @@ post {
 
 body:json {
   {
-    "userId": "admin@sqisoft.com",
-    "userPswd": "admin1234!"
+    "lgnId": "admin",
+    "userPswd": "Sqisoft1234!"
   }
 }
 
 script:post-response {
   if (res.body && res.body.data) {
     bru.setEnvVar("accessToken", res.body.data.token);
-    bru.setEnvVar("refreshToken", res.body.data.refreshToken);
+    if (res.body.data.authInfo) {
+      bru.setEnvVar("userId", res.body.data.authInfo.userId);
+      bru.setEnvVar("lgnId", res.body.data.authInfo.lgnId);
+      bru.setEnvVar("roleId", res.body.data.authInfo.roleId);
+    }
   }
 }

@@ -9,3 +9,11 @@ post {
   body: none
   auth: inherit
 }
+
+docs {
+  Authorization 헤더의 Bearer 액세스 토큰을 서버가 읽어 무효화하고,
+  refresh-token 쿠키를 제거합니다.
+
+  - 컬렉션 상위의 Bearer 인증(inherit)을 사용합니다.
+  - Request body는 사용하지 않습니다.
+}

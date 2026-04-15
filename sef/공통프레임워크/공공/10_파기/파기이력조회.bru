@@ -1,0 +1,22 @@
+meta {
+  name: 파기이력조회
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/adm/v1/user-purge/logs?page=1&pageSize=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  pageSize: 20
+}
+
+docs {
+  개인정보 파기 이력을 페이징 조회한다.
+  응답의 userIdHash는 SHA-256 해시로 원본 user_id 복원이 불가능하다.
+  권한: ROLE_ADMIN
+}
